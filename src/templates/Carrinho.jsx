@@ -1,4 +1,5 @@
 export default function Carrinho(props) {
+
     return (
         <div style={{
             display: 'flex',
@@ -18,7 +19,7 @@ export default function Carrinho(props) {
                 padding: '2px',
                 width: '40px'
             }} id='icone-carrinho'>
-                <button id='botao-carrinho'style={{
+                <button id='botao-carrinho' onClick={() => props.setExibirMenu(false)} style={{
                     backgroundColor: "inherit",
                     border: '0px',
                 }
@@ -49,7 +50,7 @@ export default function Carrinho(props) {
                 <p style={{
                     margin: '0px',
                     padding: '0px',
-                }}>{props.qtdCarrinho || 0} item</p>
+                }}>{props.carrinho.length === 1 ? props.carrinho.length + " item" : props.carrinho.length + " itens"}</p>
             </div>
             <div id='segurança' style={{
                 display: 'flex',

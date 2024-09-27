@@ -1,5 +1,6 @@
 import Carrinho from './Carrinho';
 export default function BarraBusca(props) {
+
     return (
         <>
             <div style={{
@@ -58,7 +59,7 @@ export default function BarraBusca(props) {
                     >Buscar</button>
                 </div>
                 <div>
-                    <Carrinho />
+                    <Carrinho carrinho={props.carrinho} setExibirMenu={props.setExibirMenu}/>
                 </div>
             </div>
             <div style={{
